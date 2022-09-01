@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AstPrinter",
+            "request": "launch",
+            "mainClass": "lox.AstPrinter",
+            "projectName": "lox_bc50d96"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
