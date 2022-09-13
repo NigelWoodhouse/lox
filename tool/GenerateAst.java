@@ -1,3 +1,6 @@
+// javac tool/GenerateAst.java -> compile java file
+// java tool/GenerateAst lox -> execute and save to output directory
+
 package tool;
 
 import java.io.IOException;
@@ -17,6 +20,11 @@ public class GenerateAst {
             "Grouping       : Expr expression",
             "Literal        : Object value",
             "Unary          : Token operator, Expr right"
+        ));
+
+        defineAst(outputDir, "Stmt", Arrays.asList(
+            "Expression : Expr expression",
+            "Print           : Expr expression"
         ));
     }
 
