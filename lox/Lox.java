@@ -1,5 +1,9 @@
 package lox;
 
+// To compile and run
+// javac lox.Lox.java
+// java lox.Lox lox/prog.jlox
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -56,6 +60,13 @@ public class Lox {
 
         //Stop if there was a syntax error.
         if (hadError) return;
+
+        Resolver resolver = new Resolver(interpreter);
+        resolver.resolve(statements);
+
+        // Stop if there was a resolution error.
+        if (hadError) return;
+
         interpreter.interpret(statements);
         
         // System.out.println(new AstPrinter().print(statements));

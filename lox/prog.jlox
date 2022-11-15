@@ -1,3 +1,7 @@
+// To compile and run
+// javac lox.Lox.java
+// java lox.Lox lox/prog.jlox
+
 print "hello world";
 
 var a = "global a";
